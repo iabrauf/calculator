@@ -91,41 +91,40 @@ function decimalOccurrences(string) {
   }
   return count;
 }
+ // Check if dark mode preference is stored in localStorage
+ var darkModePreference = localStorage.getItem('darkMode');
+ var isDarkMode = darkModePreference === 'true' ? true : false;
+//  console.log(isDarkMode);
 
+ // Update the toggle state and apply dark mode if necessary
+ var toggleImage = document.getElementById('dark-mode-toggle');
 
-// Check if dark mode preference is stored in localStorage
-var isDarkMode = localStorage.getItem('darkMode') === 'true';
+ if (isDarkMode) {
+   enableDarkMode();
+ } else {
+   disableDarkMode();
+ }
 
-// Update the toggle state and apply dark mode if necessary
-document.getElementById('dark-mode-toggle').checked = isDarkMode;
-if (isDarkMode) {
-  enableDarkMode();
-}
+ function toggleDarkMode() {
+   if (isDarkMode) {
+     disableDarkMode();
+   } else {
+     enableDarkMode();
+   }
+ }
 
-function toggleDarkMode() {
-  if (isDarkMode) {
-    disableDarkMode();
-  } else {
-    enableDarkMode();
-  }
-}
+ function enableDarkMode() {
+   document.getElementById('dark-mode').disabled = false;
+   localStorage.setItem('darkMode', 'true');
+   isDarkMode = true;
+   toggleImage.src = 'images/dark-mode.png';
+ }
 
-function enableDarkMode() {
-  document.getElementById('dark-mode').disabled = false;
-  localStorage.setItem('darkMode', 'true');
-  isDarkMode = true;
-}
-
-function disableDarkMode() {
-  document.getElementById('dark-mode').disabled = true;
-  localStorage.setItem('darkMode', 'false');
-  isDarkMode = false;
-}
-
-
-
-
-
-
+ function disableDarkMode() {
+   document.getElementById('dark-mode').disabled = true;
+   localStorage.setItem('darkMode', 'false');
+   isDarkMode = false;
+   toggleImage.src = 'images/light-mode.png';
+ }
 
 

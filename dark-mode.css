@@ -4,7 +4,6 @@ body{
 .toggle{
   float: right;
   margin: 1rem;
-  content: url("https://img.icons8.com/?size=1x&id=6DXM8bs2tFSU&format=png");
 }
 .grid-container{
   background-color: #505050;
