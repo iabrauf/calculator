@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dark-mode.css" id="dark-mode">
+  <title>Calculator</title>
+</head>
+<body>
+  <div>
+    <img class="toggle" id="dark-mode-toggle" onclick="toggleDarkMode()" src="images/light-mode.png">
+  </div>
+  
+
+  <div class="container">
+  <div class="grid-container">
+    <input value="" id="inputField"type="text">
+    <button value="+" class="item btn-size operator">+</button>
+    <button value="-" class="item btn-size operator">-</button>
+    <button value="*" class="item btn-size operator">X</button>
+    <button value="/" class="item btn-size operator">÷</button>
+    <button value="=" class="item equal">=</button>
+    <button value="7" class="item btn-size number">7</button>
+    <button value="8" class="item btn-size number">8</button>
+    <button value="9" class="item btn-size number">9</button>
+    <button value="4" class="item btn-size number">4</button>
+    <button value="5" class="item btn-size number">5</button>
+    <button value="6" class="item btn-size number">6</button>
+    <button value="1" class="item btn-size number">1</button>
+    <button value="2" class="item btn-size number">2</button>
+    <button value="3" class="item btn-size number">3</button>
+    <button value="C" class="item btn-size number">C</button>
+    <button value="." class="item btn-size number">.</button>
+    <button value="0" class="item btn-size number">0</button>
+  </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
